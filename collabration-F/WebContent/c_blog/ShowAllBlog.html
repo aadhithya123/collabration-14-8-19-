@@ -1,0 +1,34 @@
+<div ng-controller="blogController">
+<h3>Show Blog</h3>
+<div ng-repeat="blog in blogDetail">
+					
+					<a href="!#{{blog.blogid}}">{{blog.blogname}}</a>
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<img src ="Likes.jpg" width="40" height="40" ng-click="incrementLikes(blog.blogid)"/>{{blog.likes}}
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<img src ="Dislikes.png" width="40" height="40" ng-click="incrementDisLikes(blog.blogid)"/>{{blog.dislike}}
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<span ng-show="blog.username==currentUser.username">
+					<img src ="delete.jpg" width="40" height="40" ng-click="deleteBlog(blog.blogid)"/>
+					
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					
+					<img src ="edit.png" width="40" height="40" ng-click="editBlog(blog)"/>
+					</span>
+					<span>
+					<img src ="comment.png" width="40" height="40" ng-show="currentUser.role=='ROLE_USER'" ng-click="showComment(blog.blogid)"/>
+					</span>
+					
+					
+					<div id="{{blog.blogid}}">
+					{{blog.blogcontent}}
+					</div>
+				</div>
+</div>
+

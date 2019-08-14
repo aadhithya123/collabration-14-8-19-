@@ -1,0 +1,57 @@
+<div class="container" ng-controller="Friendcontroller">
+	<div class="row">
+	<div class="main">
+	<h3>Friend</h3>
+       </div>
+      </div>
+	<div style="background-color:cyan"><h3 align="left">Pending Friend List</h3></div>
+	<div class="row text-center text-lg-left">
+	
+	<div ng-repeat="friend in pendingFriendlist">
+	<div ng-show="friend.username==currentUser.username">
+	
+	
+	<p>
+	<img src="http://localhost:9092/ConnectPeopleMiddle1/getImage/{{friend.friendname}}" width="100" height="100">
+		<strong>{{friend.friendname}}</strong>
+		<input type="button" value="Accept" ng-click="accept(friend.friendid)" class="btn btn-danger"/>
+		<input type="button" value="Reject" ng-click="unFriend(friend.friendid)" class="btn btn-danger"/>
+       
+		</p>
+	</div>
+	</div>
+	</div>
+	
+	<div style="background-color:cyan"><h3 align="left">Show Friend List</h3></div>
+	<div class="row text-center text-lg-left">
+	<div ng-repeat="friend in friendList">
+	
+	<div ng-show="friend.username==currentUser.username">
+
+	<p>
+		<img src="http://localhost:9092/ConnectPeopleMiddle1/getImage/{{friend.friendname}}" width="100" height="100">
+		<strong>{{friend.friendname}}</strong>
+		
+		<input type="button" value="Unfriend" ng-click="unFriend(friend.friendid)" class="btn btn-danger"/>
+		</p>
+	</div>
+	
+	</div>
+	</div>
+	
+	<div style="background-color:cyan"><h3 align="left">Suggested Friend List</h3></div>
+	<div class="row text-center text-lg-left">
+	<div ng-repeat="friends in suggestedFriendlist">
+
+	<div ng-show="friends.username==currentUser.username">
+	  	{{friends}}
+	<p>
+	<img src="http://localhost:9092/ConnectPeopleMiddle1/getImage/{{friend.friendname}}" width="100" height="100">
+		<strong>{{friends.friendname}}</strong>
+		<input type="button" value="Add Friend" ng-click="accept(friends.friendid)" class="btn btn-danger"/>
+		<input type="button" value="Reject" ng-click="sendFriendRequest(friends.friendid)" class="btn btn-danger"/>
+	</p>
+	</div>
+	</div>
+	</div>
+</div>

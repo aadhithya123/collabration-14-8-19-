@@ -1,0 +1,28 @@
+<div ng-controller="UserController">
+<div class="container">    
+		<h2>Update Profile</h2>
+		
+		<form action="http://localhost:9092/ConnectPeopleMiddle1/doUpload" method="post" enctype="multipart/form-data">
+		
+        <div class="form-group">
+			<div class="input-group">
+				 <label for="exampleInputEmail1">Name: {{currentUser.username}}</label>
+			</div>
+			
+			<div class="form-group">
+			<div class="input-group">
+				 <label for="exampleInputEmail1">Picture</label>
+				<input type="file" class="form-control" name="file" required="required">
+			</div>
+        </div>
+        
+			<div class="form-group">
+            <input type="submit" class="btn btn-primary btn-lg"  value="Update profile Picture" />
+        </div>
+        </div>   
+    </form>      
+  </div>
+</div>
+        
+      
+        

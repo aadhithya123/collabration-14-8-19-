@@ -1,0 +1,14 @@
+   <div ng-controller="ChatController">
+			<form ng-submit="addMessage()" name="chatMsg">
+					<label for="blogName">Text</label> 
+					<textarea ng-model="message" cols="30" rows="3" style='color:black;background-color:pink;'></textarea>
+					<span class="count" ng-bind="max - message.length">10</span>
+					<button ng-disabled="message.length>140||message.length==0" class="btn btn-info">Send</button>
+			</form>
+	
+	<p ng-repeat="message in messages|orderBy:'time':true">
+		<time>{{message.time|date:'HH:MM'}}</time>
+		<span>{{message.message}}</span>
+	</p>
+	
+</div>

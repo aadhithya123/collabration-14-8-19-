@@ -1,0 +1,32 @@
+<div ng-controller="ForumController">
+<form>
+
+	<h3>Add Forum</h3>
+			<div>
+				<div>
+					<span class="input-group-addon"><i class="fa fa-user"></i></span>		
+		     			<input type="text" class="form-control" ng-model="forum.forumcontains" placeholder="Forum Content" required="required"/>
+						</div>
+					</div>
+					<div>
+					
+				 
+						<button type="submit"  ng-click="add(forum)" class="btn btn-primary btn-block btn-lg">Submit</button>
+				</div>
+<table>
+<tr><td colspan="2">
+<ul>
+<li ng-repeat="forum in forumdetails">
+{{forum.username}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{{forum.forumcontains}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{{forum.createdate}}
+
+<input type="button" value="Delete" ng-click="delete(forum.forumid)">
+</li>
+</ul>
+</td>
+</tr>
+</table>
+				</div>
+			</form>
+       </div>

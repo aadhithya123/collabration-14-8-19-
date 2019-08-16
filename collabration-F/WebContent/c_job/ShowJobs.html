@@ -1,0 +1,28 @@
+<div ng-controller="JobController">
+
+		<h3>Show Job</h3>
+		
+		<div ng-repeat="job in jobs">
+		
+		
+		<a href="!#{{job.jobid}}">{{job.designation}}</a>
+		
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+<!-- 		<input type="button" ng-click="Apply()" class="btn btn-success"/> -->
+		
+		
+		<div id="{{job.jobid}}">
+		<div>
+		<table>
+		<tr><td>Job Description</td><td>{{job.description}}</td></tr>
+		<tr><td>Company Name</td><td>{{job.companyname}}</td></tr>
+		<tr><td>Location</td><td>{{job.location}}</td></tr>
+		<tr><td>CTC</td><td>{{job.ctc}}</td></tr>
+		<tr><td>Last Date For Apply</td><td>{{job.lastdateforapply}}</td></tr>
+		<tr><td>Skills</td><td>{{job.skills}}</td></tr>
+		</table>
+	  </div>
+	 </div>
+	</div>
+</div>

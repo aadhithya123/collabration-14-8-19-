@@ -1,0 +1,22 @@
+<div ng-controller="blogController">
+<form>
+			<div>
+						<h3>Add blog</h3>
+					<div>
+						<div>
+							<span class="input-group-addon"><i class="fa fa-user"></i></span>
+							<input type="text" class="form-control" ng-model="blogtobeupdated.blogname" name="username" placeholder="Blog Name" required="required"/>
+						</div>
+					</div>
+					<div>
+						<div>
+					<span class="input-group-addon"><i class="fas fa-envelope prefix"></i></span>
+					<input type="text" id="inputIconEx1" size="50" class="form-control" id="address" ng-model="blogtobeupdated.blogcontent" name="address" placeholder="Add Content" required="required"/>
+					</div>
+       			 </div>
+					<div>
+						<button type="submit"  ng-click="updateBlog(blogtobeupdated)" class="btn btn-primary btn-block btn-lg">Update Blog</button>
+				</div>
+			</div>
+			</form>
+</div>

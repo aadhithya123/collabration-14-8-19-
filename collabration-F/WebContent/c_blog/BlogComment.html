@@ -1,0 +1,36 @@
+<div ng-controller="BlogCommentController">
+
+
+		<h3>Blog Comment</h3>
+		
+<div id="{{blog.blogid}}">
+<div>{{blog.blogcomment}}</div>
+</div>
+
+
+<div>
+<table>
+<tr><td colspan="2">
+<ul>
+<li ng-repeat="comment in blogComments">
+{{comment.username}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{{comment.blogcomment}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{{comment.createdate}}
+
+<input type="button" ng-show="comment.username==currentUser.username" value="Delete" ng-click="deleteComment(comment.blogcommentid)" />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<textarea rows="2" cols="30" ng-model="comment.blogcomment" style='color:black;background-color:pink;'></textarea>
+<td><input type="button" value="send" ng-click="addComment(comment)"></td></tr>
+</table>
+</div>
+
+
+
+
+
+
+</div>

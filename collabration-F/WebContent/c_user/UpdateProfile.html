@@ -1,0 +1,47 @@
+<div ng-controller="UserController">
+
+<div class="signup-form">
+   
+		<h2>Sign Up</h2>
+		<p>Please fill in this form to create an account!</p>
+		<hr>
+        <div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span>
+				<input type="text" class="form-control" size="20" name="username" id="username" ng-model="currentUser.username" pattern="[a-zA-Z 0-9]" placeholder="Username" required="required">
+			</div>
+        </div>
+        <div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fas fa-phone"></i></span>
+				<input type="email" name="useremail"  size="25" class="form-control" id="email" ng-model="currentUser.emailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" required="required" >
+			</div>
+        </div>
+         <div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fas fa-envelope prefix"></i></span>
+				<input type="text" id="inputIconEx1" size="50" class="form-control" id="address" ng-model="currentUser.useraddress" name="useraddress" placeholder="Address" required="required">
+			</div>
+        </div>
+        <div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span>
+				<input type="tel" id="phone" size="10" class="form-control" name="userphone" id="phone" ng-model="currentUser.userphone" placeholder="Phone No" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required="required">
+			</div>
+        </div>
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+				<input type="password" name="password" class="form-control" size="20" id="password"  ng-model="currentUser.password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" required="required" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+			</div>
+        </div> 
+        <div class="form-group">
+			<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+		</div>
+		<div class="form-group">
+            <button type="button" ng-click="updateprofile(currentUser)" value="" class="btn btn-primary btn-lg">Sign Up</button>
+        </div>
+    
+</div>
+</div>
+                           
